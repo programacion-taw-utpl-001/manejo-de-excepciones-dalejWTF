@@ -30,22 +30,24 @@ public class Principal {
                 System.out.print("Ingrese apellido: ");
                 apellido= teclado.next();
                 System.out.print("Ingrese nota Matematica: ");
-                notasMate[contador]= Double.parseDouble(teclado.next());
+                notasMate[contador]= Double.parseDouble(teclado.next());//Se realiza el cast para comprobar que no hay letras en las notas
                 System.out.print("Ingrese nota Sociales: ");
-                notasSociales[contador]= Double.parseDouble(teclado.next());
+                notasSociales[contador]= Double.parseDouble(teclado.next());//Se realiza el cast para comprobar que no hay letras en las notas
                 
                 estudiantes[contador]= new Estudiante(nombre,apellido);
                 contador++;
                 
                 
-            } catch (NumberFormatException numberFormatException) {
+            } catch (NumberFormatException numberFormatException) {//Excepcion por el formato numerico 
                 System.err.println("No se puede poner letras en notas!");
             }catch (Exception e){
                 
             }
         }
+        //Se setea la data
         Asignacion a= new Asignacion(estudiantes,notasMate,notasSociales);
         
+        //Se imprime la data
         System.out.println(a);
     }
 }
