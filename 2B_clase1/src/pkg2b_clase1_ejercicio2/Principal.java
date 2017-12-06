@@ -16,6 +16,7 @@ public class Principal {
         
         int contador=0;
         String nombre,apellido;
+        //useDelimiter => se usa para decir que queremos leer siguiente campo a partir de un salto
         Scanner teclado= new Scanner(System.in).useDelimiter("\n");
         Estudiante estudiantes[]= new Estudiante[4];
         
